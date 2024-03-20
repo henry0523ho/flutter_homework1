@@ -46,7 +46,44 @@ class MyHomePage extends StatelessWidget {
               Text(
                 'Brass Instruments',
               ),
-              ContentRow(items: ["trumpet", "trombone", "frenchHorn","euphonium","tuba"]),
+              ContentRow(items: [
+                "trumpet",
+                "trombone",
+                "frenchHorn",
+                "euphonium",
+                "tuba"
+              ]),
+              Text(
+                'Percussion Instruments',
+              ),
+              ContentRow(items: ["timpani", "snareDrum", "xylophone"]),
+              Stack(
+                children: <Widget>[
+                  Image(
+                    image: AssetImage('assets/berry.jpg'),
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
+                  ),
+                  Image(
+                    image: AssetImage('assets/eyes.png'),
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
+                  ),
+                  Text("\n假裝這是廣告XDD",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueGrey,
+                      )),
+                  Icon(
+                    Icons.disabled_by_default_outlined,
+                    size: 20,
+                    color: Colors.black87,
+                  )
+                ],
+              )
             ],
           ),
         ));
@@ -80,7 +117,15 @@ class RowItem extends StatelessWidget {
           width: 200,
           fit: BoxFit.cover,
         ),
-        Text(title),
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.red,
+          ),
+        ),
       ],
     );
   }
